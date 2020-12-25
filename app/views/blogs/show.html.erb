@@ -1,0 +1,14 @@
+<h1>ブログ詳細画面</h1>
+<p>タイトル: <%= @blog.title %></p>
+<p>内容: <%= @blog.content %></p>
+<p>画像: <%= @blog.image %></p>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @blog.image.url if @blog.image.present? %>
+</p>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to "ブログ一覧画面にもどる", blogs_path %>
